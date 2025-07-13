@@ -1,0 +1,64 @@
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur shadow-sm">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 text-xl font-bold text-[hsl(349_31%_57%)] hover:scale-105 transition">
+      <img src="/static/studio/img/logo.png" alt="Лого" class="h-8 w-8 object-contain" />
+      {{ company.name }}
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex gap-6 text-sm font-medium text-[hsl(25_5.3%_44.7%)]">
+      {% for i in nav %}
+        <a href="/pages/{{ i.id }}" class="hover:text-[hsl(349_31%_57%)] hover:scale-105 transition">{{ i.name }}</a>
+      {% endfor %}
+      <a href="/about" class="hover:text-[hsl(349_31%_57%)] hover:scale-105 transition">За нас</a>
+    </nav>
+
+    <!-- Social icons (desktop only) -->
+    <div class="hidden md:flex gap-4 items-center">
+      <a href="https://www.instagram.com/artbeautyzone.varna?igsh=c2hrcnA1N2t4N2h2" target="_blank" aria-label="Instagram"
+         class="text-xl text-[hsl(349_31%_57%)] hover:text-pink-600 transition hover:scale-110">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/1EgPAVTrsZ/" target="_blank" aria-label="Facebook"
+         class="text-xl text-[hsl(349_31%_57%)] hover:text-blue-600 transition hover:scale-110">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="md:hidden text-[hsl(349_31%_57%)] text-2xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden flex flex-col items-center gap-4 py-4 bg-white shadow-inner text-sm font-medium text-[hsl(25_5.3%_44.7%)]">
+    {% for i in nav %}
+      <a href="/pages/{{ i.id }}" class="hover:text-[hsl(349_31%_57%)] hover:scale-105 transition">{{ i.name }}</a>
+    {% endfor %}
+    <a href="/about" class="hover:text-[hsl(349_31%_57%)] hover:scale-105 transition">За нас</a>
+    <div class="flex gap-4 mt-2">
+      <a href="https://www.instagram.com/artbeautyzone.varna?igsh=c2hrcnA1N2t4N2h2" target="_blank" aria-label="Instagram"
+         class="text-xl text-[hsl(349_31%_57%)] hover:text-pink-600 transition hover:scale-110">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/1EgPAVTrsZ/" target="_blank" aria-label="Facebook"
+         class="text-xl text-[hsl(349_31%_57%)] hover:text-blue-600 transition hover:scale-110">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+<!-- Mobile menu toggle -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>

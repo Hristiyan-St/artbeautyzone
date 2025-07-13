@@ -1,0 +1,58 @@
+<!-- Location Section -->
+<section id="contact" class="bg-[hsl(45_65%_92%)] px-6 py-12">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-[hsl(349_31%_57%)] mb-10">Посетете ни</h2>
+    <p class="text-center text-lg text-[hsl(25_5.3%_44.7%)] mb-10">
+      Намерете своя оазис на красота и спокойствие в сърцето на града.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <!-- Информация -->
+      <div class="text-center md:text-left space-y-4 text-[hsl(25_5.3%_30%)]">
+        <p><strong>Адрес:</strong> {{ company.addres }}</p>
+        <p><strong>Телефон:</strong> 
+          <a href="tel:{{ company.tel }}" class="text-[hsl(349_31%_57%)] hover:underline transition">
+            {{ company.tel }}
+          </a>
+        </p>
+        <p><strong>Имейл:</strong> 
+          <a href="mailto:{{ company.mail }}" class="text-[hsl(349_31%_57%)] hover:underline transition">
+            {{ company.mail }}
+          </a>
+        </p>
+        <a href="https://www.google.com/maps?q=гр.+{{ company.sity }},+ул.+{{ company.ulica }}+{{ company.nomer }}" 
+           target="_blank"
+           class="inline-block mt-4 px-6 py-2 bg-[hsl(349_31%_57%)] text-white rounded-md hover:scale-105 transition">
+          Отвори в Google Maps
+        </a>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start gap-4 mt-6 text-xl">
+          <a href="https://www.instagram.com/artbeautyzone.varna/" target="_blank" aria-label="Instagram"
+             class="text-[hsl(349_31%_57%)] hover:text-pink-600 hover:scale-110 transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1EgPAVTrsZ/" target="_blank" aria-label="Facebook"
+             class="text-[hsl(349_31%_57%)] hover:text-blue-600 hover:scale-110 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.tiktok.com/@artbeautyzonevarna" target="_blank" aria-label="TikTok"
+             class="text-[hsl(349_31%_57%)] hover:text-black hover:scale-110 transition">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Карта -->
+      <div>
+        <iframe
+          src="https://www.google.com/maps?q=гр.+{{ company.sity }},+ул.+{{ company.ulica }}+{{ company.nomer}}&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-xl shadow-md hover:shadow-xl transition">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+

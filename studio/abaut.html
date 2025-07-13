@@ -1,0 +1,25 @@
+{% include "studio/base.html" %}
+{% include "studio/nav.html" %}
+
+<!-- About Section -->
+<section id="about" class="bg-[hsl(45_65%_92%)] px-6 py-12 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-[hsl(349_31%_57%)] mb-10">За {{ company.name }}</h2>
+
+    <p class="text-lg mb-6 leading-relaxed text-[hsl(25_5.3%_30%)] hover:shadow-md hover:scale-[1.01] transition duration-300 ease-in-out bg-white/60 p-4 rounded-lg">
+      Основана на принципите на иновации, изкуство и грижа за клиента, <strong>Art Beauty Zone</strong> е повече от салон.
+      Вярваме в подчертаването на вашата естествена красота чрез персонализирани, научно-обосновани процедури.
+    </p>
+
+    <p class="text-lg leading-relaxed text-[hsl(25_5.3%_30%)] hover:shadow-md hover:scale-[1.01] transition duration-300 ease-in-out bg-white/60 p-4 rounded-lg">
+      Нашият екип от сертифицирани терапевти, включително и дипломиран рехабилитатор, е посветен на предоставянето на
+      максимална грижа, внимание и качество. Инвестираме в най-новите технологии, за да осигурим безопасни, ефективни и
+      комфортни процедури за всички наши клиенти, като използваме <strong>PrimeLase HR Exellence</strong> —
+      най-мощният диоден лазер.
+    </p>
+  </div>
+</section>
+
+{% include "studio/location.html" %}
+{% include "studio/end.html" %}
+

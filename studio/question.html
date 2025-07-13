@@ -1,0 +1,26 @@
+{% include "studio/base.html" %}
+{% include "studio/nav.html" %}
+
+<!-- FAQ Section -->
+<section id="faq" class="bg-[hsl(45_65%_92%)] px-6 py-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-[hsl(349_31%_57%)] mb-10">Често задавани въпроси</h2>
+    <p class="text-lg text-[hsl(25_5.3%_44.7%)] mb-10">Намерете отговори на най-често задаваните въпроси тук.</p>
+
+    <div class="space-y-6 text-left">
+      {% for i in question %}
+      <details
+        class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer group">
+        <summary class="font-semibold text-[hsl(349_31%_57%)] group-hover:underline">
+          {{ i.question }}
+        </summary>
+        <p class="mt-2 text-sm text-[hsl(25_5.3%_44.7%)] leading-relaxed">
+          {{ i.answer }}
+        </p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "studio/end.html" %}

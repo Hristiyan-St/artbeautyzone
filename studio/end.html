@@ -1,0 +1,95 @@
+<footer class="bg-[hsl(349_31%_57%_/.05)] px-6 py-12 mt-10 text-[hsl(25_5.3%_44.7%)]">
+  <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-3 text-center md:text-left">
+    
+    <!-- Бранд -->
+    <div>
+      <h2 class="text-2xl font-bold text-[hsl(349_31%_57%)]">Art Beauty Zone</h2>
+      <p class="text-sm mt-2">Вашето светилище за модерни процедури за красота и здраве.</p>
+    </div>
+
+    <!-- Бързи връзки -->
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Бързи връзки</h3>
+      <ul class="space-y-2 text-sm">
+        {% for i in footer %}
+        <li><a class="hover:underline hover:text-[hsl(349_31%_57%)] transition" href="/pages/{{ i.id }}">{{ i.name }}</a></li>
+        {% endfor %}
+        <li><a class="hover:underline hover:text-[hsl(349_31%_57%)] transition" href="/about">За нас</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакти + Социални мрежи -->
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Запазете час</h3>
+      <p class="text-sm">Свържете се с нас на:</p>
+      <a href="tel:+359877701929" class="block text-[hsl(349_31%_57%)] font-medium mt-1 hover:underline">+359 87 770 1929</a>
+      <p class="text-sm mt-3">или на имейл:</p>
+      <a href="mailto:artbeautyzonevarna@gmail.com" class="block text-[hsl(349_31%_57%)] font-medium hover:underline">
+        artbeautyzonevarna@gmail.com
+      </a>
+
+      <!-- Социални бутони -->
+      <div class="flex justify-center md:justify-start gap-4 mt-5 text-xl">
+        <a href="https://www.instagram.com/artbeautyzone.varna/" target="_blank" aria-label="Instagram"
+           class="text-[hsl(349_31%_57%)] hover:text-pink-600 hover:scale-110 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1EgPAVTrsZ/" target="_blank" aria-label="Facebook"
+           class="text-[hsl(349_31%_57%)] hover:text-blue-600 hover:scale-110 transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.tiktok.com/@artbeautyzonevarna" target="_blank" aria-label="TikTok"
+           class="text-[hsl(349_31%_57%)] hover:text-black hover:scale-110 transition">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center text-xs text-muted-foreground mt-10">© 2025 Art Beauty Zone. Всички права запазени.</div>
+</footer>
+
+<!-- Scroll-to-top Button -->
+<button id="scrollToTopBtn"
+  class="fixed bottom-20 right-6 z-50 hidden w-12 h-12 rounded-full bg-[hsl(349_31%_57%)] text-white text-xl flex items-center justify-center shadow-lg hover:scale-110 transition"
+  aria-label="Scroll to top">
+  ↑
+</button>
+
+<!-- Call Button -->
+<a aria-label="Обадете ни се"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[hsl(349_31%_57%)] text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
+   href="tel:+359877701929">
+  📞
+</a>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-white border-t p-4 shadow-lg flex flex-col sm:flex-row items-center justify-between z-50 text-sm">
+  <span>Използваме бисквитки за по-добро преживяване. С използването на сайта, се съгласявате.</span>
+  <button onclick="document.getElementById('cookie-banner').style.display='none';"
+    class="mt-2 sm:mt-0 bg-[hsl(349_31%_57%)] text-white px-4 py-2 rounded hover:bg-[hsl(349_31%_57%_/.85)] transition">
+    Приеми
+  </button>
+</div>
+
+<!-- Scroll Script -->
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      scrollBtn.classList.remove("hidden");
+    } else {
+      scrollBtn.classList.add("hidden");
+    }
+  });
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<!-- Font Awesome от CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
